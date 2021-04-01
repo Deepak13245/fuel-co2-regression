@@ -1,0 +1,73 @@
+@import "~font-awesome/css/font-awesome.min.css";
+
+@custom-media --phone (max-width: 1024px);
+
+@custom-media --desktop (min-width: 1025px);
+
+:root {
+    --xs-spacing: 4px;
+    --s-spacing: 8px;
+    --m-spacing: 12px;
+    --l-spacing: 16px;
+    --xl-spacing: 20px;
+    --xxl-spacing: 24px;
+    --xxxl-spacing: 28px;
+    --xxxxl-spacing: 32px;
+    --xxxxxl-spacing: 36px;
+    --xxxxxxl-spacing: 40px;
+
+    --bold: 700;
+    --semi-bold: 600;
+
+
+    --white: white;
+    --primary: #000000;
+    --red: red;
+    --secondary: #ee2f58;
+    --grey: #f5f5f5;
+
+    --border-radius: 8px;
+
+    --h1-font-size: 24px;
+    --h2-font-size: 20px;
+    --h3-font-size: 16px;
+    --d-font-size: 14px;
+    --m-font-size: 12px;
+    --s-font-size: 10px;
+    --xs-font-size: 8px;
+}
+
+body {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.showMobile {
+    display: none;
+    @media (--phone) {
+        display: block;
+    }
+}
+
+.showDesktop {
+    display: block;
+    @media (--phone) {
+        display: none;
+    }
+}
+
+.bold {
+    font-weight: var(--bold);
+}
+
+.textCenter {
+    text-align: center;
+}

@@ -1,0 +1,5 @@
+.root {
+    @media (--phone) {
+        padding-top: 0;
+    }
+}

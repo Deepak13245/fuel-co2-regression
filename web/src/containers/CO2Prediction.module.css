@@ -1,0 +1,12 @@
+.form {
+    margin: var(--xxl-spacing) 0;
+}
+
+.table {
+    margin: var(--l-spacing) 0;
+}
+
+.h1 {
+    text-align: center;
+    margin: var(--l-spacing) 0;
+}

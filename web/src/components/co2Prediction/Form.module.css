@@ -1,0 +1,13 @@
+.margin {
+    margin: var(--m-spacing) 0;
+}
+
+.buttonContainer {
+    margin-top: var(--l-spacing);
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    width: 50% !important;
+}

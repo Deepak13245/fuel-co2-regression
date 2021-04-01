@@ -1,0 +1,12 @@
+.PHONY: submit deploy build-web deploy-web
+submit:
+	gcloud builds submit --tag <region>-docker.pkg.dev/<project-id>/<repo>/<name>
+
+deploy:
+	gcloud run deploy co2-regression --image=<region>-docker.pkg.dev/<project-id>/<repo>/<name>
+
+build-web:
+	cd web && yarn build:prod
+
+deploy-web:
+	firebase deploy --only hosting:co2-prediction

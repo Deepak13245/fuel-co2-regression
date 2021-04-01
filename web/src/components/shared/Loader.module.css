@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 var(--l-spacing);
+}
+
+.container i {
+    margin: var(--m-spacing) 0;
+}
+
+.container div {
+    margin: var(--m-spacing) 0;
+}
