@@ -3,7 +3,7 @@ from os.path import join
 import os
 import pandas as pd
 import joblib
-from transformer import DenseTransformer
+from transformer import CombineFuelConsumption
 from flask_cors import CORS
 
 app = Flask(__name__)
