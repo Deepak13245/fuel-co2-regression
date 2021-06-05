@@ -11,11 +11,25 @@ CORS(app)
 
 model = joblib.load(join('models', 'model.m5'))
 
+rainfall = joblib.load(join('models', 'rainfall.m5'))
+rainfallTr = joblib.load(join('models', 'rainfall_transformer.m5'))
+
 @app.route('/', methods=['POST'])
 def predict():
     data = request.get_json(force=True)
     df = pd.DataFrame(data)
     result = model.predict(df)
+    return jsonify(result.tolist())
+
+
+
+@app.route('/rainfall', methods=['POST'])
+def predictRainfall():
+    data = request.get_json(force=True)
+    df = pd.DataFrame(data)
+    result = rainfall.predict(rainfallTr.transform(df[['Location', 'MinTemp', 'MaxTemp', 'Rainfall', 'WindGustDir',
+       'WindGustSpeed', 'Humidity9am', 'Humidity3pm', 'Pressure9am',
+       'Pressure3pm', 'RainToday', 'Month']]))
     return jsonify(result.tolist())
 
 

@@ -1,6 +1,7 @@
 import React, { Suspense } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { CO2Prediction } from 'containers/CO2Prediction';
+import { RainfallPrediction } from 'containers/RainfallPrediction';
 import styles from './MainContainer.module.css';
 
 function MainContainer() {
@@ -10,6 +11,9 @@ function MainContainer() {
         <Switch>
           <Route path="/" exact>
             <CO2Prediction />
+          </Route>
+          <Route path="/rainfall" exact>
+            <RainfallPrediction />
           </Route>
         </Switch>
       </div>

@@ -1,0 +1,43 @@
+.form {
+    margin: var(--xxl-spacing) 0;
+}
+
+.table {
+    margin: var(--l-spacing) 0;
+}
+
+.h1 {
+    text-align: center;
+    margin: var(--l-spacing) 0;
+}
+
+.github {
+    margin-left: var(--m-spacing);
+}
+
+.topBar {
+    float: right;
+}
+
+.topBar > * {
+    margin: 0 var(--m-spacing) !important;
+}
+
+.disclaimer {
+    font-style: italic;
+    font-size: small;
+}
+
+.container {
+    margin: var(--xxxl-spacing) 0;
+    height: 90vh;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.spacer {
+    flex: 1;
+}
+
